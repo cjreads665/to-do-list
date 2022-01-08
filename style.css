@@ -37,6 +37,44 @@ button{
     height: 2rem;
 }
 .inputDiv button{
+    cursor: pointer;
     width: 2rem;
     background-color: #adfdd2;
+}
+.inputDiv button:hover{
+    background-color: #85FFBD;
+}
+.task-list{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-height: 10rem;
+    list-style: none;
+    justify-content: space-between;
+}
+.task-list li{
+    text-transform: capitalize;
+    margin-top: 0.2rem;
+    padding-left:0.5rem;
+    background-color: #d4ebdf;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+}
+.completed-tasks{
+    align-self: flex-start;
+    width: 100%;
+    margin-left: 1rem;
+}
+.completed-tasks h4{
+    text-transform: capitalize;
+}
+.completed-tasks ul{
+    list-style: none;
+    width: 90%;
+}
+.completed-tasks ul li{
+    margin-top: 0.5rem;
 }
