@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+font-family: 'Lato', sans-serif;
+}
+button{
+    outline: none;
+    border: none;
+    background-color: #85FFBD;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 70%;
+    min-height: 50vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.inputDiv{
+    /* border: 1px solid black; */
+    height:2rem;
+}
+.inputDiv > *{
+    height: 2rem;
+}
+.inputDiv button{
+    width: 2rem;
+    background-color: #adfdd2;
+}
