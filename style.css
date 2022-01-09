@@ -89,6 +89,8 @@ header {
   justify-content: space-between;
   height: 3rem;
   margin: 0.3rem 0;
+  position: relative;
+  overflow: hidden;
 
 }
 .completed-tasks ul li .icon-wrapper{
@@ -133,11 +135,31 @@ header {
     min-height: 60vh;
   }
 }
-@media (min-width:801px){
+@media (min-width:1001px){
   .wrapper{
     width: 40vw;
+    min-height: 70vh;
   }
   .inputDiv{
     height: 3rem;
   }
+  .lower-part{
+    margin: 0;
+  }
+  .icon-wrapper{
+    /* opacity: 0; */
+    position: absolute;
+    right: -5rem;
+    transition: all 0.2s ease;
+  }
+  .task-list li:hover > .icon-wrapper{
+    right: 0;
+  }
+  .completed-tasks li:hover > .icon-wrapper{
+    right: 0;
+  }
+  /* .icon-wrapper.active{
+    right: 0;
+  } */
+
 }
