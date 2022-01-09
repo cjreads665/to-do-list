@@ -1,80 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-*,*::after,*::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: #85FFBD;
-background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+body {
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+button {
+  outline: none;
+  border: none;
+  background-color: #85ffbd;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 70%;
+  min-height: 60vh;
+  justify-content: space-around;
+  align-items: center;
+}
+header {
+  margin: 0.5rem 0;
+}
+.inputDiv {
+  /* border: 1px solid black; */
+  height: 2.5rem;
+  width: 90%;
+}
+.inputDiv > * {
+  height: 90%;
+}
+.inputDiv > input {
+  width: 80%;
+}
+.inputDiv button {
+  cursor: pointer;
+  width: 18%;
+  background-color: #adfdd2;
+}
+.inputDiv button:hover,
+.inputDiv button:active,
+.lower-part button:hover
+.lower-part button:active
+ {
+  background-color: #85ffbd;
+}
+.task-list {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  min-height: 10rem;
+  list-style: none;
+  justify-content: space-between;
+}
+.icon-wrapper{
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 100%;
+}
+.task-list .icon-wrapper{
+  background-color: #2fd47c;
+}
 
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-font-family: 'Lato', sans-serif;
+.task-list li,
+.completed-tasks ul li {
+  text-transform: capitalize;
+  margin-top: 0.2rem;
+  padding-left: 0.5rem;
+  background-color: #d4ebdf;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+  margin: 0.3rem 0;
+
 }
-button{
-    outline: none;
-    border: none;
-    background-color: #85FFBD;
+.completed-tasks ul li .icon-wrapper{
+  background-color: rgb(245, 38, 38);
 }
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    background: white;
-    width: 70%;
-    min-height: 50vh;
-    justify-content: space-around;
-    align-items: center;
+.lower-part {
+  /* text-align: left; */
+  /* margin-left: 1rem;
+     */
+  /* align-self: flex-start; */
+  margin-left: 1rem;
 }
-.inputDiv{
-    /* border: 1px solid black; */
-    height:2rem;
+.lower-part button {
+  /* text-align: center; */
+  margin: 0.8rem 0;
+  padding: 0.7rem;
+  background-color: #91f0bd;
+  cursor: pointer;
+  margin-left: 15%;
 }
-.inputDiv > *{
-    height: 2rem;
+.completed-tasks {
+  align-self: flex-start;
+  width: 100%;
+  margin-left: 1rem;
 }
-.inputDiv button{
-    cursor: pointer;
-    width: 2rem;
-    background-color: #adfdd2;
+.completed-tasks h4 {
+  text-transform: capitalize;
 }
-.inputDiv button:hover{
-    background-color: #85FFBD;
+.completed-tasks ul {
+  list-style: none;
+  width: 90%;
 }
-.task-list{
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    min-height: 10rem;
-    list-style: none;
-    justify-content: space-between;
+.completed-tasks ul li {
+  margin-left: -0.2rem;
+  margin: 0.7rem 0;
 }
-.task-list li{
-    text-transform: capitalize;
-    margin-top: 0.2rem;
-    padding-left:0.5rem;
-    background-color: #d4ebdf;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 2rem;
+
+/*for tablets*/
+@media (min-width:600px) {
+  .wrapper{
+    width: 60vw;
+    min-height: 60vh;
+  }
 }
-.completed-tasks{
-    align-self: flex-start;
-    width: 100%;
-    margin-left: 1rem;
-}
-.completed-tasks h4{
-    text-transform: capitalize;
-}
-.completed-tasks ul{
-    list-style: none;
-    width: 90%;
-}
-.completed-tasks ul li{
-    margin-top: 0.5rem;
+@media (min-width:801px){
+  .wrapper{
+    width: 40vw;
+  }
+  .inputDiv{
+    height: 3rem;
+  }
 }
