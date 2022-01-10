@@ -14,7 +14,7 @@ window.onload = function start(){
    
 
 }
-console.log(tasksList);
+
 
 function checkIfType(){
     //after removing whitespaces, if there are no characters
