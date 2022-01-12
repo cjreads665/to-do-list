@@ -37,11 +37,16 @@ let arrayOfTasks;
         //get the value from its key by first parsing
         arrayOfTasks = JSON.parse(getUncompletedTasks)
     }
-    arrayOfTasks.push(inputField.value)
-    localStorage.setItem("Tasks",JSON.stringify(arrayOfTasks))
-    let tags = `<li>${inputField.value}<div class="icon-wrapper"><i class="fa-solid fa-check"></i></div></li>`
-    tasksList.innerHTML += tags
-    inputField.value=""
+    if(inputField.value==''){
+        alert('enter a new task')
+    }
+    else{
+        arrayOfTasks.push(inputField.value)
+        localStorage.setItem("Tasks",JSON.stringify(arrayOfTasks))
+        let tags = `<li>${inputField.value}<div class="icon-wrapper"><i class="fa-solid fa-check"></i></div></li>`
+        tasksList.innerHTML += tags
+        inputField.value=""
+    }
     
 }
 function clearList(){
