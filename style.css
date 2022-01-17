@@ -99,6 +99,9 @@ header {
   cursor: pointer;
 
 }
+.completed-tasks{
+  margin-bottom: 2rem;
+}
 .completed-tasks ul li .icon-wrapper{
   background-color: rgb(245, 38, 38);
 }

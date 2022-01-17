@@ -3,6 +3,7 @@ let addBtn = document.querySelector(".inputDiv button"),
   tasksList = document.querySelector(".task-list"),
   incompleteTasks = document.querySelector(".task-list ul li"),
   clearBtn = document.querySelector(".lower-part button"),
+  lengthOfTask = document.querySelector('.length')
   completedList = document.querySelector(".completed-tasks ul");
   // console.log(completedList);
 let arrayOfTasks,
@@ -53,6 +54,7 @@ function moveToCompleted(){
   localStorage.setItem("CTasks",JSON.stringify(arrayOfCompleted))
   this.remove()
   completedList.innerHTML += `<li>${txt}<div class="icon-wrapper"><i class="fa-solid fa-trash"></i></div></li>`
+  setTimeout(moveToo,1000)
 }
 
 
@@ -62,10 +64,11 @@ function move(){
     task.addEventListener('click',moveToCompleted)
   })
 }
+
+
 function moveToo(){
   Array.from(completedList.children).forEach(task=>{
     task.addEventListener('click',()=>{
-      console.log(task);
       let txt= task.textContent
       array = JSON.parse(localStorage.getItem("CTasks"))
       if(txt!==undefined){
@@ -78,7 +81,9 @@ function moveToo(){
   })
 }
 
-
+setInterval(() => {
+  lengthOfTask.textContent = tasksList.children.length
+}, 500);
 
 
 window.onload = start();
